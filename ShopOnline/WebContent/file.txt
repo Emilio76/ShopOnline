@@ -1,0 +1,53 @@
+create sequence prodotti_seq start with 1 increment by 1;
+create sequence utente_seq start with 1 increment by 1;
+create sequence acquista_seq start with 1 increment by 1;
+ 
+
+
+
+create table prodotti (
+id_prodotto Integer primary key,
+nome varchar2(20),
+categoria varchar2(20),
+marca varchar2(20),
+prezzo number(6,2),
+offerta Integer check(offerta in(1,0)),
+sconto Integer,
+quantita_disponibile Integer,
+immagine varchar2(50)
+);
+
+
+create table acquista (
+id_acquisto Integer primary key,
+tipo_spedizione varchar2(30),
+data_inizio date,
+data_fine date,
+prezzo_spedizione Integer,
+quantita_acquistata Integer,
+id_utente Integer,
+id_prodotto Integer
+);
+
+create table utente (
+id_utente Integer primary key,
+nome varchar2(20) ,
+cognome varchar2(20) ,
+username varchar2(20) unique,
+password varchar2(20) ,
+indirizzo varchar2(40)
+);
+--MONITOR
+insert  into prodotti values(prodotti_seq.nextval,'monitor asus','MONITOR','asus',200.00,1,10,25,'img/monitor_asus.png');
+insert  into prodotti values(prodotti_seq.nextval,'monitor samsung','MONITOR','samsung',95.00,0,0,30,'img/monitor_samsung.png');
+--TELEFONIA
+insert  into prodotti values(prodotti_seq.nextval,'telefono honor one','TELEFONIA','honor',415.00,1,10,15,'img/telefonia_honor.png');
+insert  into prodotti values(prodotti_seq.nextval,'telefono iphone 7','TELEFONIA','apple',499.99,0,0,240,'img/telefonia_apple.png');
+--STAMPANTI
+insert  into prodotti values(prodotti_seq.nextval,'stampante epson','STAMPANTE','epson',49.99,1,15,40,'img/stampante_epson.png');
+insert  into prodotti values(prodotti_seq.nextval,'stampante canon','STAMPANTE','canon',40.00,0,0,25,'img/stampante_epson.png');
+--FOTOGRAFIA
+insert  into prodotti values(prodotti_seq.nextval,'fotocamera sony','FOTOGRAFIA','sony',900.00,1,10,10,'img/fotografia_sony.png');
+insert  into prodotti values(prodotti_seq.nextval,'fotocamera fuji','FOTOGRAFIA','juji',700.00,0,0,25,'img/monitor_asus.png');
+
+
