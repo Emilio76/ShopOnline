@@ -51,11 +51,16 @@
           
         </ul>
       </li> <!--  chiusura dropdown -->
-      <%if (utente !=null) { %>
-      <li style="float:right" ><a>
-      <%= utente.getUsername() %></a></li>
-      <% } %>
       
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%if (utente !=null) { %>
+      
+      <%= utente.getUsername() %>
+      <% } else { %>
+      Sign Up
+      <% } %></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
       
     </ul>
   </div>
