@@ -1,0 +1,22 @@
+.img-carousel {
+	margin:auto;
+	width: 30%;
+}
+
+.popover {
+	background-color: transparent !important;
+	border: 1px solid darkred;
+	width: 130px !important;
+	/*font-size: 12px !important;*/
+	height: 80px !important;
+	
+}
+.popover-title {
+	background-color: transparent !important;
+	border : none;
+	font-size: 18px !important;
+	
+}
+.popover.right .arrow:after {
+	border-right-color: tomato;
+}
