@@ -1,9 +1,10 @@
 function validazioneRegistrazione () {
 	var nome = document.getElementById('nome').value;
 	var cognome = document.getElementById('cognome').value;
+	var indirizzo = document.getElementById('indirizzo').value;
 	var username = document.getElementById('username').value;
 	var password = document.getElementById('password').value;
-    if(nome != '' & cognome != '' & username != '' & password != '') {
+    if(nome != '' & cognome != '' & indirizzo != '' & username != '' & password != '') {
     	
     	return true;
     }else{

@@ -23,6 +23,7 @@ public class Registrazione extends HttpServlet{
         Utente utente = new Utente();
 		utente.setNome(nome);
 		utente.setCognome(cognome);
+		utente.setIndirizzo(indirizzo);
 		utente.setUsername(username);
 		utente.setPassword(password);
 		System.out.println(utente);

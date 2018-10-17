@@ -19,7 +19,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/CiaoStore">Ciao Store</a>
+      <a class="navbar-brand" href="/ShopOnline">Ciao Store</a>
     </div>
     <ul class="nav navbar-nav" style="width: 93%">
       
@@ -80,9 +80,9 @@
 </div>
 
 <div class="form-group">
-<label for="cognome" class="control-label col-md-4">Indirizzo</label>
+<label for="indirizzo" class="control-label col-md-4">Indirizzo</label>
 <div class="col-md-5">
-<input type="text" name="cognome" id="cognome" class="form-control">
+<input type="text" name="indirizzo" id="indirizzo" class="form-control">
 </div>
 <span class="col-md-3"></span>
 </div>

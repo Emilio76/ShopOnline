@@ -24,7 +24,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/CiaoStore">Ciao Store</a>
+      <a class="navbar-brand" href="/ShopOnline">Ciao Store</a>
     </div>
     <ul class="nav navbar-nav" style="width: 93%">
       
