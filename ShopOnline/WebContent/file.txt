@@ -38,16 +38,16 @@ password varchar2(20) ,
 indirizzo varchar2(40)
 );
 --MONITOR
-insert  into prodotti values(prodotti_seq.nextval,'monitor asus','MONITOR','asus',200.00,1,10,25,'img/monitor_asus.png');
-insert  into prodotti values(prodotti_seq.nextval,'monitor samsung','MONITOR','samsung',95.00,0,0,30,'img/monitor_samsung.png');
+insert  into prodotti values(prodotti_seq.nextval,'24LEDVG248QE','MONITOR','asus',200.00,1,10,25,'img/monitor_asus.png');
+insert  into prodotti values(prodotti_seq.nextval,'S24D330H','MONITOR','samsung',95.00,0,0,30,'img/monitor_samsung.png');
 --TELEFONIA
-insert  into prodotti values(prodotti_seq.nextval,'telefono honor one','TELEFONIA','honor',415.00,1,10,15,'img/telefonia_honor.png');
-insert  into prodotti values(prodotti_seq.nextval,'telefono iphone 7','TELEFONIA','apple',499.99,0,0,240,'img/telefonia_apple.png');
+insert  into prodotti values(prodotti_seq.nextval,'Honor one','TELEFONIA','honor',415.00,1,10,15,'img/telefonia_honor.png');
+insert  into prodotti values(prodotti_seq.nextval,'Iphone 7','TELEFONIA','apple',499.99,0,0,240,'img/telefonia_apple.png');
 --STAMPANTI
-insert  into prodotti values(prodotti_seq.nextval,'stampante epson','STAMPANTE','epson',49.99,1,15,40,'img/stampante_epson.png');
-insert  into prodotti values(prodotti_seq.nextval,'stampante canon','STAMPANTE','canon',40.00,0,0,25,'img/stampante_epson.png');
+insert  into prodotti values(prodotti_seq.nextval,'Printer Pro WF-C5710DWF','STAMPANTE','epson',49.99,1,15,40,'img/stampante_epson.png');
+insert  into prodotti values(prodotti_seq.nextval,'PIXMA IP7250','STAMPANTE','canon',40.00,0,0,25,'img/stampante_epson.png');
 --FOTOGRAFIA
-insert  into prodotti values(prodotti_seq.nextval,'fotocamera sony','FOTOGRAFIA','sony',900.00,1,10,10,'img/fotografia_sony.png');
-insert  into prodotti values(prodotti_seq.nextval,'fotocamera fuji','FOTOGRAFIA','juji',700.00,0,0,25,'img/monitor_asus.png');
+insert  into prodotti values(prodotti_seq.nextval,'A77','FOTOGRAFIA','sony',900.00,1,10,10,'img/fotografia_sony.png');
+insert  into prodotti values(prodotti_seq.nextval,'X100','FOTOGRAFIA','juji',700.00,0,0,25,'img/monitor_asus.png');
 
 
