@@ -41,7 +41,7 @@
       
       <!--  menu a tendina -->
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="">Generi
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Categorie
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="listaCategorie?categoria=FOTOGRAFIA">Fotografia</a></li>
