@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import it.overnet.dao.UtenteDAOImpl;
+import it.overnet.dao.UtenteDaoImpl;
 import it.overnet.model.Utente;
 
 public class Registrazione extends HttpServlet{
@@ -26,7 +26,7 @@ public class Registrazione extends HttpServlet{
 		utente.setUsername(username);
 		utente.setPassword(password);
 		System.out.println(utente);
-		UtenteDAOImpl utenteDao = new UtenteDAOImpl();
+		UtenteDaoImpl utenteDao = new UtenteDaoImpl();
 		utenteDao.insertUtente(utente);
 		utenteDao.close();
 		req.setAttribute("inserito", true);
