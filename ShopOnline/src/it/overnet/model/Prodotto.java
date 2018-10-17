@@ -11,6 +11,7 @@ public class Prodotto {
 	private int sconto;
 	private int quantitaDisponibile;
 	private String immagine;
+	
 	public int getIdProdotto() {
 		return idProdotto;
 	}
