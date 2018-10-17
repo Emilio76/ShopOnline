@@ -2,6 +2,7 @@ package it.overnet.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +31,11 @@ public class ProdottoDaoImpl implements ProdottoDao {
 			Prodotto prodotto = new Prodotto();
 			prodotto.setIdProdotto(rs.getInt(1));
 			prodotto.setNome(rs.getString(2));
-			prodotto.setCategoria();
-			
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return lista;
 			
 	}
 
