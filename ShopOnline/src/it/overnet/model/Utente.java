@@ -8,15 +8,7 @@ public class Utente {
 	private String password;
 	private String indirizzo;
 	
-	public Utente(int idUtente, String nome, String cognome, String username, String password, String indirizzo) {
-		super();
-		this.idUtente = idUtente;
-		this.nome = nome;
-		this.cognome = cognome;
-		this.username = username;
-		this.password = password;
-		this.indirizzo = indirizzo;
-	}
+	
 	public int getIdUtente() {
 		return idUtente;
 	}
