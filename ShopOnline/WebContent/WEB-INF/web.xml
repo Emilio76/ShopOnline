@@ -11,7 +11,7 @@
      <servlet-mapping>
      <servlet-name>Registrazione</servlet-name>
      <url-pattern>/registrazione</url-pattern>
-     </servlet-mapping>
+      </servlet-mapping>
      
 <!--  LOGIN SERVLET -->
  <servlet>
