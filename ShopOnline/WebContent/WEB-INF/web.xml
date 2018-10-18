@@ -33,6 +33,13 @@
      <url-pattern>/logout</url-pattern>
      </servlet-mapping>
   
-  
+   <servlet>
+    <servlet-name>listaProdotti</servlet-name>
+    <servlet-class>it.overnet.controller.listaProdotti</servlet-class>
+    </servlet>
+     <servlet-mapping>
+     <servlet-name>listaProdotti</servlet-name>
+     <url-pattern>/listaProdotti</url-pattern>
+     </servlet-mapping>
   
 </web-app>

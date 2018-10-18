@@ -12,6 +12,7 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js">
 </script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
+<script type="text/javascript" src="js/validazionePassword.js"></script>
 </head>
 <body>
 
@@ -80,9 +81,13 @@ Inserisci Username</label>
 <label for="password" class="control-label col-md-4">
 Inserisci Password</label>
 <div class="col-md-5">
+<p>
 <input type="password" name="password" id="password" class="form-control">
 </div>
-<span class="col-md-3"></span>
+<a>
+<span class="glyphicon glyphicon-eye-open" onclick="showPassword()"></span>
+</a>
+
 </div>
 
 <div class="form-group">
