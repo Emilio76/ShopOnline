@@ -1,6 +1,8 @@
 package it.overnet.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import it.overnet.dao.UtenteDaoImpl;
+import it.overnet.model.Prodotto;
 import it.overnet.model.Utente;
 
 public class Login extends HttpServlet{
@@ -30,6 +33,8 @@ public class Login extends HttpServlet{
 			req.setAttribute("login", true);
 			HttpSession sessione = req.getSession();
 			sessione.setAttribute("utenteLoggato", utente);
+			List<Prodotto> carrello = new ArrayList<>();
+			sessione.setAttribute("carrello", carrello);
 		}
 		RequestDispatcher dispatcher = req.getRequestDispatcher("login.jsp");
 	    dispatcher.forward(req, resp);

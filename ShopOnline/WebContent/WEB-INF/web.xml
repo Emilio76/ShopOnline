@@ -41,5 +41,14 @@
      <servlet-name>ListaProdotti</servlet-name>
      <url-pattern>/listaProdotti</url-pattern>
      </servlet-mapping>
+     
+    <servlet>
+    <servlet-name>Carrello</servlet-name>
+    <servlet-class>it.overnet.controller.Carrello</servlet-class>
+    </servlet>
+     <servlet-mapping>
+     <servlet-name>Carrello</servlet-name>
+     <url-pattern>/carrello</url-pattern>
+     </servlet-mapping>  
   
 </web-app>

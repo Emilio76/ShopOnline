@@ -14,6 +14,8 @@ public interface ProdottoDao {
 	
 	public List<Prodotto> getProdottiByOfferta(boolean offerta);
 	
+	public Prodotto getProdottoById(int id);
+	
 	public void aggiornaQuantita (int idProdotto, int quantita);
 	
 	public void close();
