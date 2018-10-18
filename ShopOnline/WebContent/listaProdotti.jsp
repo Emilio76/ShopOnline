@@ -71,7 +71,7 @@ request.getAttribute("listaProdotti");%>
 <a href="ordina?sort=quantita">
 <span class="glyphicon glyphicon-sort-by-order">
 </span></a></th>
-<th>Immagine</th>
+<th></th>
 <th>Acquista</th>
 </thead>
 <tbody>
@@ -84,12 +84,14 @@ request.getAttribute("listaProdotti");%>
 
 <td><%=prodotto.getQuantitaDisponibile() %></td>
 
-<td><img src ="<%=prodotto.getImmagine() %>" width="30%"></td>
+<td><img src ="<%=prodotto.getImmagine() %>" width="60%"></td>
 
 <td>
 <form action="carrello" method="get">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
-<input type="submit" value ="Aggiungi al carrello">
+<button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-shopping-cart"></span> Acquista
+        </button>
 </form>
 </td>
 </tr>
