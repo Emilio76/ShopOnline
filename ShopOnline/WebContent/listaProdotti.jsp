@@ -84,6 +84,7 @@ request.getAttribute("listaProdotti");%>
 <td><%=prodotto.getQuantitaDisponibile() %></td>
 <td><%=prodotto.getImmagine() %></td>
 
+
 <td>
 <form action="acquisto" method="get">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
