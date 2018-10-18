@@ -26,30 +26,40 @@ request.getAttribute("listaProdotti");%>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/ShopOnline">SHOP ONLINE</a>
+      <a class="navbar-brand" href="/ShopOnline">Ciao Store</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="/ShopOnline">Home</a></li>
+    <ul class="nav navbar-nav" style="width: 93%">
+      
       <% if (utente == null) { %>
-        <li><a href="registrazione.jsp">Registrazione</a></li>
-      <li><a href="login.jsp">Login</a></li>
-      <% }else{ %>
-      <li><a href="Logout">Logout</a></li>
-      <li><a href="ProdottiAcquistati">Prodotti Acquistati</a></li>
-      <%} %>
-      <li><a href="listaProdotti">ListaProdotti</a></li>
-      <!-- MENU A TENDINA -->
+      <li><a href="registrazione.jsp">Registrazione</a></li>      
+      <% } else { %>
+            
+            <li><a href="prodottiAcquistati">Prodotti Acquistati</a></li>
+      <% } %>      
+      <li><a href="listaProdotti">Lista Prodotti</a></li>
+      
+      
+      <!--  menu a tendina -->
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="">
-        Categorie
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">Categorie
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="listaGenere?Categoria=MONITOR">MONITOR</a></li>
-          <li><a href="listaGenere?Categoria=TELEFONIA>">TELEFONIA</a></li>
-          <li><a href="listaGenere?Categoria=STAMPANTE">STAMPANTE</a></li>
-          <li><a href="listaGenere?Categoria=FOTOGRAFIA">FOTOGRAFIA</a></li>
+          <li><a href="listaCategorie?categoria=FOTOGRAFIA">Fotografia</a></li>
+          <li><a href="listaCategorie?categoria=MONITOR">Monitor</a></li>
+          <li><a href="listaCategorie?categoria=STAMPANTE">Stampanti</a></li>
+          <li><a href="listaCategorie?categoria=TELEFONIA">Telefonia</a></li>          
         </ul>
-      </li>
+      </li> <!--  chiusura dropdown -->
+      
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%if (utente !=null) { %>      
+      <%= utente.getUsername() %>
+      <% } else { %>
+      Sign Up
+      <% } %></a></li>
+      <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      
     </ul>
   </div>
 </nav>
