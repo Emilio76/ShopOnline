@@ -88,20 +88,12 @@ request.getAttribute("listaProdotti");%>
 <form action="acquisto" method="get">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
 <input type="submit" value ="Acquista" 
-<%if (utente == null || prodotto.getQuantitaDisponibile() < 1){ %>
-class="btn btn-primary" onclick="return false"
 
-<% } else {%>
-class="btn btn-primary"
-<%} %>
-<%if (utente == null){ %>
-data-toggle="popover" title="Effettua<br>la<br> Login"
 
-<% } %>
-<%if (prodotto.getQuantitaDisponibile() < 1 && utente != null){ %>
-data-toggle="popover" title="attualmente non disponibile"
-<% } %>
+
+
 >
+
 </form>
 </td>
 </tr>

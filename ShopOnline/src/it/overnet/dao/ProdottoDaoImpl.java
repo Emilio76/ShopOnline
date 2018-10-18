@@ -25,7 +25,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 	@Override
 	public List<Prodotto> getAllProdotti() {
 		List<Prodotto> lista = new ArrayList<>();
-		String query = "select * from prodotto";
+		String query = "select * from prodotti";
 		try (Statement statement = connection.createStatement();
 				ResultSet rs = statement.executeQuery(query)) {
 			while (rs.next()) {
@@ -39,6 +39,8 @@ public class ProdottoDaoImpl implements ProdottoDao {
 			prodotto.setSconto(rs.getInt(7));
 			prodotto.setQuantitaDisponibile(rs.getInt(8));
 			prodotto.setImmagine(rs.getString(9));
+			
+			lista.add(prodotto);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

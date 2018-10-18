@@ -34,11 +34,11 @@
      </servlet-mapping>
   
    <servlet>
-    <servlet-name>listaProdotti</servlet-name>
-    <servlet-class>it.overnet.controller.listaProdotti</servlet-class>
+    <servlet-name>ListaProdotti</servlet-name>
+    <servlet-class>it.overnet.controller.ListaProdotti</servlet-class>
     </servlet>
      <servlet-mapping>
-     <servlet-name>listaProdotti</servlet-name>
+     <servlet-name>ListaProdotti</servlet-name>
      <url-pattern>/listaProdotti</url-pattern>
      </servlet-mapping>
   

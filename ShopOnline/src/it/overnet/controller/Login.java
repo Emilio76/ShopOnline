@@ -31,7 +31,7 @@ public class Login extends HttpServlet{
 			HttpSession sessione = req.getSession();
 			sessione.setAttribute("utenteLoggato", utente);
 		}
-		RequestDispatcher dispatcher = req.getRequestDispatcher("listaProdotti.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("login.jsp");
 	    dispatcher.forward(req, resp);
 	}
 	

@@ -44,7 +44,8 @@ public class UtenteDaoImpl implements UtenteDao {
 				utente.setNome(resulSet.getString(2));
 				utente.setCognome(resulSet.getString(3));
 				utente.setUsername(resulSet.getString(4));
-				utente.setPassword(resulSet.getString(5));				
+				utente.setPassword(resulSet.getString(5));
+				utente.setIndirizzo(resulSet.getString(6));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
