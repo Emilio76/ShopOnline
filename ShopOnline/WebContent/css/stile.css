@@ -31,3 +31,7 @@
 .table>thead>tr>th {
 	text-align: right !important;
 }
+
+img {
+    cursor: zoom-in;
+}

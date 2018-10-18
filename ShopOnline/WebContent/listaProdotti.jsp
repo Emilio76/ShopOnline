@@ -14,14 +14,25 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/stile.css">
 <script type="text/javascript" src="js/popover.js"></script>
+<script type="text/javascript" src="js/zoom.js"></script>
 </head>
 <body>
-<%
-  Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
+<% Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti = (List<Prodotto>) 
 request.getAttribute("listaProdotti");%>
 
-
+ <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+          <img src="" class="enlargeImageModalSource" style="width: 100%;">
+        </div>
+      </div>
+    </div>
+</div>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -93,9 +104,16 @@ request.getAttribute("listaProdotti");%>
 <td><%=prodotto.getPrezzo() %></td>
 
 <td><%=prodotto.getQuantitaDisponibile() %></td>
+<div>
+
+
 
 <td><img src ="<%=prodotto.getImmagine() %>" width="60%"></td>
 
+
+
+
+</div>
 <td>
 <form action="carrello" method="get">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
