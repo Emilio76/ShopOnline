@@ -50,7 +50,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 	@Override
 	public List<Prodotto> getProdottiByCat(Categoria categoria) {
 		List<Prodotto> listaProdotti = new ArrayList<>();
-		String query = "select * from film where categoria = ?";
+		String query = "select * from prodotto where categoria = ?";
 		ResultSet rs = null;
 		try (PreparedStatement prepared = connection.prepareStatement(query)) {
 			prepared.setString(1, categoria.toString());
@@ -77,7 +77,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 	@Override
 	public List<Prodotto> getProdottiByOfferta(boolean offerta) {
 		List<Prodotto> listaProdotti = new ArrayList<>();
-		String query = "select * from film where offerta = 1";
+		String query = "select * from prodotto where offerta = 1";
 		ResultSet rs = null;
 		try (Statement statement = connection.createStatement()) {			
 			rs= statement.executeQuery(query);

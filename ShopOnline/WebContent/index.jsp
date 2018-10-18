@@ -29,13 +29,11 @@
     <ul class="nav navbar-nav" style="width: 93%">
       
       <% if (utente == null) { %>
-      <li><a href="registrazione.jsp">Registrazione</a></li>
-      <li><a href="login.jsp">Login</a></li>
+      <li><a href="registrazione.jsp">Registrazione</a></li>      
       <% } else { %>
-            <li><a href="logout">Logout</a></li>
+            
             <li><a href="prodottiAcquistati">Prodotti Acquistati</a></li>
-      <% } %>
-      
+      <% } %>      
       <li><a href="listaProdotti">Lista Prodotti</a></li>
       
       
@@ -47,20 +45,18 @@
           <li><a href="listaCategorie?categoria=FOTOGRAFIA">Fotografia</a></li>
           <li><a href="listaCategorie?categoria=MONITOR">Monitor</a></li>
           <li><a href="listaCategorie?categoria=STAMPANTE">Stampanti</a></li>
-          <li><a href="listaCategorie?categoria=TELEFONIA">Telefonia</a></li>
-          
+          <li><a href="listaCategorie?categoria=TELEFONIA">Telefonia</a></li>          
         </ul>
       </li> <!--  chiusura dropdown -->
       
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%if (utente !=null) { %>
-      
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%if (utente !=null) { %>      
       <%= utente.getUsername() %>
       <% } else { %>
       Sign Up
       <% } %></a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
+      <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
       
     </ul>
   </div>
