@@ -1,6 +1,7 @@
 package it.overnet.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -31,6 +32,13 @@ public class ProdottoDaoImpl implements ProdottoDao {
 			Prodotto prodotto = new Prodotto();
 			prodotto.setIdProdotto(rs.getInt(1));
 			prodotto.setNome(rs.getString(2));
+			prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
+			prodotto.setMarca(rs.getString(4));
+			prodotto.setPrezzo(rs.getDouble(5));
+			prodotto.setOfferta(rs.getBoolean(6));
+			prodotto.setSconto(rs.getInt(7));
+			prodotto.setQuantitaDisponibile(rs.getInt(8));
+			prodotto.setImmagine(rs.getString(9));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -41,14 +49,54 @@ public class ProdottoDaoImpl implements ProdottoDao {
 
 	@Override
 	public List<Prodotto> getProdottiByCat(Categoria categoria) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Prodotto> listaProdotti = new ArrayList<>();
+		String query = "select * from film where categoria = ?";
+		ResultSet rs = null;
+		try (PreparedStatement prepared = connection.prepareStatement(query)) {
+			prepared.setString(1, categoria.toString());
+			rs= prepared.executeQuery();
+			while (rs.next()) {
+				Prodotto prodotto = new Prodotto();
+				prodotto.setIdProdotto(rs.getInt(1));
+				prodotto.setNome(rs.getString(2));
+				prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
+				prodotto.setMarca(rs.getString(4));
+				prodotto.setPrezzo(rs.getDouble(5));
+				prodotto.setOfferta(rs.getBoolean(6));
+				prodotto.setSconto(rs.getInt(7));
+				prodotto.setQuantitaDisponibile(rs.getInt(8));
+				prodotto.setImmagine(rs.getString(9));
+			}
+				
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listaProdotti;
 	}
 
 	@Override
 	public List<Prodotto> getProdottiByOfferta(boolean offerta) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Prodotto> listaProdotti = new ArrayList<>();
+		String query = "select * from film where offerta = 1";
+		ResultSet rs = null;
+		try (Statement statement = connection.createStatement()) {			
+			rs= statement.executeQuery(query);
+			while (rs.next()) {
+				Prodotto prodotto = new Prodotto();
+				prodotto.setIdProdotto(rs.getInt(1));
+				prodotto.setNome(rs.getString(2));
+				prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
+				prodotto.setMarca(rs.getString(4));
+				prodotto.setPrezzo(rs.getDouble(5));
+				prodotto.setOfferta(rs.getBoolean(6));
+				prodotto.setSconto(rs.getInt(7));
+				prodotto.setQuantitaDisponibile(rs.getInt(8));
+				prodotto.setImmagine(rs.getString(9));
+			}				
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listaProdotti;
 	}
 
 	@Override
@@ -59,7 +107,13 @@ public class ProdottoDaoImpl implements ProdottoDao {
 
 	@Override
 	public void close() {
-		// TODO Auto-generated method stub
+		if (connection != null){
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 		
 	}
 
