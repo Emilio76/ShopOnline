@@ -61,15 +61,17 @@ request.getAttribute("listaProdotti");%>
 <table class="table table-hover">
 <thead>
 <th>Nome</th>
-<th>Prezzo 
+<th>Categoria</th>
+<th>Marca</th>
+<th>Prezzo
 <a href="ordina?sort=prezzo">
 <span class="glyphicon glyphicon-sort-by-alphabet">
 </span></a></th>
-<th>Categoria</th>
-<th>Quantita 
+<th>Quantita
 <a href="ordina?sort=quantita">
 <span class="glyphicon glyphicon-sort-by-order">
 </span></a></th>
+<th>Immagine</th>
 <th>Acquista</th>
 </thead>
 <tbody>
@@ -79,13 +81,13 @@ request.getAttribute("listaProdotti");%>
 <td><%=prodotto.getCategoria() %></td>
 <td><%=prodotto.getMarca() %></td>
 <td><%=prodotto.getPrezzo() %></td>
-<td><%=prodotto.isOfferta() %></td>
-<td><%=prodotto.getSconto() %></td>
+
 <td><%=prodotto.getQuantitaDisponibile() %></td>
-<td><img src ="<%=prodotto.getImmagine() %>"></td>
+
+<td><img src ="<%=prodotto.getImmagine() %>" width="30%"></td>
 
 <td>
-<form action="acquisto" method="get">
+<form action="carrello" method="get">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
 <input type="submit" value ="Aggiungi al carrello">
 </form>
