@@ -82,6 +82,7 @@ request.getAttribute("listaProdotti");%>
 <td><%=prodotto.isOfferta() %></td>
 <td><%=prodotto.getSconto() %></td>
 <td><%=prodotto.getQuantitaDisponibile() %></td>
+<td><%=prodotto.getImmagine() %></td>
 
 <td>
 <form action="acquisto" method="get">
