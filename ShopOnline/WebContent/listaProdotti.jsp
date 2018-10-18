@@ -82,18 +82,12 @@ request.getAttribute("listaProdotti");%>
 <td><%=prodotto.isOfferta() %></td>
 <td><%=prodotto.getSconto() %></td>
 <td><%=prodotto.getQuantitaDisponibile() %></td>
-<td><%=prodotto.getImmagine() %></td>
+<td><img src ="<%=prodotto.getImmagine() %>"></td>
 
 <td>
 <form action="acquisto" method="get">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
-<input type="submit" value ="Acquista" 
-
-
-
-
->
-
+<input type="submit" value ="Aggiungi al carrello">
 </form>
 </td>
 </tr>
