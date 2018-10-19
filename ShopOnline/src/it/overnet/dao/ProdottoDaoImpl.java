@@ -100,6 +100,34 @@ public class ProdottoDaoImpl implements ProdottoDao {
 		}
 		return listaProdotti;
 	}
+	
+	
+	@Override
+	public Prodotto getProdottoById(int id) {
+		String query = "select * from prodotti where id_prodotto = '"+ id +"'";
+		Prodotto prodotto = new Prodotto();
+		
+		try(Statement statement = connection.createStatement();
+		ResultSet rs = statement.executeQuery(query)) {
+			if (rs.next()) {
+			
+				prodotto.setIdProdotto(rs.getInt(1));
+				prodotto.setNome(rs.getString(2));
+				prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
+				prodotto.setMarca(rs.getString(4));
+				prodotto.setPrezzo(rs.getDouble(5));
+				prodotto.setOfferta(rs.getBoolean(6));
+				prodotto.setSconto(rs.getInt(7));
+				prodotto.setQuantitaDisponibile(rs.getInt(8));
+				prodotto.setImmagine(rs.getString(9));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return prodotto;
+	}
+	
 
 	@Override
 	public void aggiornaQuantita(int idProdotto, int quantita) {
@@ -118,5 +146,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 		}
 		
 	}
+
+
 
 }
