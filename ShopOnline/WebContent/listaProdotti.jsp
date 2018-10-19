@@ -63,12 +63,14 @@ request.getAttribute("listaProdotti");%>
       </li> <!--  chiusura dropdown -->
       
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%if (utente !=null) { %>      
+      <%if (utente !=null) { %>  
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span>     
       <%= utente.getUsername() %>
+      <li><a href="logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       <% } else { %>
       Sign Up
-      <% } %></a></li>
       <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <% } %></a></li>
       </ul>
       
     </ul>

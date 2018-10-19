@@ -19,7 +19,7 @@ public class ListaProdotti extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		ProdottoDaoImpl pDao = new ProdottoDaoImpl();
 		List<Prodotto> listaP = pDao.getAllProdotti();
-		System.out.println("n film : " + listaP.size());
+		System.out.println("n prodotti : " + listaP.size());
 		pDao.close();
 		req.setAttribute("listaProdotti", listaP);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("listaProdotti.jsp");
