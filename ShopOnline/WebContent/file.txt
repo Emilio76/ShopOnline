@@ -48,6 +48,6 @@ insert  into prodotti values(prodotti_seq.nextval,'Pro WF-C5710DWF','STAMPANTE',
 insert  into prodotti values(prodotti_seq.nextval,'PIXMA IP7250','STAMPANTE','canon',40.00,0,0,25,'img/stampante_epson.jpg');
 --FOTOGRAFIA
 insert  into prodotti values(prodotti_seq.nextval,'A77','FOTOGRAFIA','sony',900.00,1,10,10,'img/fotografia_sony.jpg');
-insert  into prodotti values(prodotti_seq.nextval,'X100','FOTOGRAFIA','fuji',700.00,0,0,25,'img/monitor_fiji.jpg');
+insert  into prodotti values(prodotti_seq.nextval,'X100','FOTOGRAFIA','fuji',700.00,0,0,25,'img/fotografia_fiji.jpg');
 
 
