@@ -27,7 +27,9 @@
       <a class="navbar-brand" href="/ShopOnline">Ciao Store</a>
     </div>
     <ul class="nav navbar-nav" style="width: 93%">
-      <li><a href="prodottiAcquistati">Prodotti Acquistati</a></li>
+    <% if (utente != null) { %>
+      <li><a href="prodottiAcquistati">Prodotti Acquistati</a></li>      
+      <% } %>
       <li><a href="listaProdotti">Lista Prodotti</a></li>
             
       
