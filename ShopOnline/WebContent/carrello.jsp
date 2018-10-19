@@ -91,6 +91,7 @@ request.getSession().getAttribute("carrello");%>
 <div>
 
 
+
 <td><img src ="<%=prodotto.getImmagine() %>" width="60%"></td>
 
 </div>
