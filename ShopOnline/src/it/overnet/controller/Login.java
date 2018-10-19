@@ -36,8 +36,8 @@ public class Login extends HttpServlet{
 			List<Prodotto> carrello = new ArrayList<>();
 			sessione.setAttribute("carrello", carrello);
 		}
-		RequestDispatcher dispatcher = req.getRequestDispatcher("login.jsp");
-	    dispatcher.forward(req, resp);
+		resp.sendRedirect("listaProdotti");
+	    
 	}
 	
 }

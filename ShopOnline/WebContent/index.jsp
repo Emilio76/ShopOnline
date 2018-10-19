@@ -50,7 +50,7 @@
       </li> <!--  chiusura dropdown -->
       
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%if (utente !=null) { %>      
+      <li><a href="registrazione.jsp"><span class="glyphicon glyphicon-user"></span> <%if (utente !=null) { %>      
       <%= utente.getUsername() %>
       <% } else { %>
       Sign Up
