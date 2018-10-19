@@ -27,15 +27,9 @@
       <a class="navbar-brand" href="/ShopOnline">Ciao Store</a>
     </div>
     <ul class="nav navbar-nav" style="width: 93%">
-      
-      <% if (utente == null) { %>
-      <li><a href="registrazione.jsp">Registrazione</a></li>      
-      <% } else { %>
-            
-            <li><a href="prodottiAcquistati">Prodotti Acquistati</a></li>
-      <% } %>      
+      <li><a href="prodottiAcquistati">Prodotti Acquistati</a></li>
       <li><a href="listaProdotti">Lista Prodotti</a></li>
-      
+            
       
       <!--  menu a tendina -->
       <li class="dropdown">
@@ -53,6 +47,9 @@
       <%if (utente !=null) { %>  
       <li><a href="#"><span class="glyphicon glyphicon-user"></span>     
       <%= utente.getUsername() %>
+      <li><a href="#">
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+        </a></li>
       <li><a href="logout">Logout</a></li>
       <% } else { %>
       <li><a href="registrazione.jsp"><span class="glyphicon glyphicon-user"></span>Sign Up

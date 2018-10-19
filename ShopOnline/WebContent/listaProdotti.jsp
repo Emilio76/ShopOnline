@@ -16,7 +16,7 @@
 <script type="text/javascript" src="js/popover.js"></script>
 <script type="text/javascript" src="js/zoom.js"></script>
 </head>
-<body>
+<body background-color: red;>
 <% Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
 <% List<Prodotto> listaProdotti = (List<Prodotto>) 
 request.getAttribute("listaProdotti");%>

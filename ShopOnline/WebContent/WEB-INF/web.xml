@@ -51,4 +51,13 @@
      <url-pattern>/carrello</url-pattern>
      </servlet-mapping>  
   
+  
+  	<servlet>
+    <servlet-name>ListaCategoria</servlet-name>
+    <servlet-class>it.overnet.controller.ListaCategoria</servlet-class>
+    </servlet>
+     <servlet-mapping>
+     <servlet-name>ListaCategoria</servlet-name>
+     <url-pattern>/listaCategorie</url-pattern>
+     </servlet-mapping>  
 </web-app>
