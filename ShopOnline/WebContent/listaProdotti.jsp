@@ -120,11 +120,17 @@ request.getAttribute("listaProdotti");%>
 
 </div>
 <td>
+<% if (utente == null) { %>
+<button type="submit" class="btn btn-default btn-sm">
+ <li><a href="login.jsp"><span class="glyphicon glyphicon-shopping-cart"></span> Aggiungi al Carrello
+        </button></a></li>
+<% }else if(utente != null ){%>
 <form action="carrello" method="get">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
 <button type="submit" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-shopping-cart"></span> Aggiungi al Carrello
         </button>
+	<% }%>
 </form>
 </td>
 </tr>
