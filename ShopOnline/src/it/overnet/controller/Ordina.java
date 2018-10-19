@@ -49,7 +49,7 @@ public class Ordina extends HttpServlet{
 						return 0;
 					}
 				
-				}
+				} 
 			};
 			Collections.sort(listaProdotti,comparatorePrezzo);
 		}

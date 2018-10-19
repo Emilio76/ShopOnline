@@ -119,7 +119,7 @@ request.getAttribute("listaProdotti");%>
 <td>
 <form action="carrello" method="get">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
-<button type="button" class="btn btn-default btn-sm">
+<button type="submit" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-shopping-cart"></span> Acquista
         </button>
 </form>

@@ -96,7 +96,7 @@ request.getSession().getAttribute("carrello");%>
 
 <td><%= %></td>
 <form action="/action_page.php">
-  First name:<br>
+  First :<br>
   <input type="text" name="firstname" value="Mickey">
   <br>
   Last name:<br>
