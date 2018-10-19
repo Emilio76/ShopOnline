@@ -103,7 +103,7 @@ request.getAttribute("listaProdotti");%>
 <td><%=prodotto.getNome() %></td>
 <td><%=prodotto.getCategoria() %></td>
 <td><%=prodotto.getMarca() %></td>
-<td><%=prodotto.getPrezzo() %></td>
+<td><%=prodotto.getPrezzo() %> &euro;</td>
 
 <td><%=prodotto.getQuantitaDisponibile() %></td>
 <div>
