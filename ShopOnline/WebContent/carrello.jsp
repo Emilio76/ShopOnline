@@ -94,9 +94,6 @@ request.getSession().getAttribute("carrello");%>
 
 <td><img src ="<%=prodotto.getImmagine() %>" width="60%"></td>
 
-
-
-
 </div>
 
 <td> <form action="/action_page.php">
