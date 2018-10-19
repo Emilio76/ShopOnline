@@ -66,6 +66,9 @@ request.getAttribute("listaProdotti");%>
       <%if (utente !=null) { %>  
       <li><a href="#"><span class="glyphicon glyphicon-user"></span>     
       <%= utente.getUsername() %>
+      <li><a href="carrello.jsp">
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+        </a></li>
       <li><a href="logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       <% } else { %>
       Sign Up
@@ -120,7 +123,7 @@ request.getAttribute("listaProdotti");%>
 <form action="carrello" method="get">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
 <button type="submit" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-shopping-cart"></span> Acquista
+          <span class="glyphicon glyphicon-shopping-cart"></span> Aggiungi al Carrello
         </button>
 </form>
 </td>
