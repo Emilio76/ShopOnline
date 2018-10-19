@@ -76,15 +76,8 @@ request.getSession().getAttribute("carrello");%>
 <th>Categoria</th>
 <th>Marca</th>
 <th>Prezzo
-<a href="ordina?sort=prezzo">
-<span class="glyphicon glyphicon-sort-by-alphabet">
+
 </span></a></th>
-<th>Quantita
-<a href="ordina?sort=quantita">
-<span class="glyphicon glyphicon-sort-by-order">
-</span></a></th>
-<th></th>
-<th>Acquista</th>
 </thead>
 <tbody>
 <% for (Prodotto prodotto : carrello) { %>
@@ -94,19 +87,43 @@ request.getSession().getAttribute("carrello");%>
 <td><%=prodotto.getMarca() %></td>
 <td><%=prodotto.getPrezzo() %></td>
 
-<td><%= %></td>
-<form action="/action_page.php">
-  First :<br>
-  <input type="text" name="firstname" value="Mickey">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse">
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
-</td>
+
+<div>
+
+
+
+<td><img src ="<%=prodotto.getImmagine() %>" width="60%"></td>
+
+
+
+
+</div>
+
+<td> <form action="/action_page.php">
+  <select name="quantita">
+    <option value="1"selected>1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+     <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      </select>
+  </form>
+  <input type="submit" class="button" value="elimina">
 </tr>
 <%} %>
-
+<td> <form action="/action_page.php">
+  <select name="spedizione">
+    <option value="ieri">IERI</option>
+    <option value="oggi">OGGI</option>
+    <option value="domani" selected>DOMANI</option>
+  </select>
+  <br><br>
+  <input type="submit">
+  </form>
 </body>
 </html>
