@@ -25,7 +25,7 @@
     <ul class="nav navbar-nav" style="width: 93%">
       
       <% if (utente == null) { %>
-      <li><a href="registrazione.jsp">Registrazione</a></li>
+      
       <li><a href="login.jsp">Login</a></li>
       <% } else { %>
             <li><a href="logout">Logout</a></li>

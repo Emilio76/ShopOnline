@@ -52,7 +52,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 	@Override
 	public List<Prodotto> getProdottiByCat(Categoria categoria) {
 		List<Prodotto> listaProdotti = new ArrayList<>();
-		String query = "select * from prodotto where categoria = ?";
+		String query = "select * from prodotti where categoria = ?";
 		ResultSet rs = null;
 		try (PreparedStatement prepared = connection.prepareStatement(query)) {
 			prepared.setString(1, categoria.toString());
@@ -68,6 +68,7 @@ public class ProdottoDaoImpl implements ProdottoDao {
 				prodotto.setSconto(rs.getInt(7));
 				prodotto.setQuantitaDisponibile(rs.getInt(8));
 				prodotto.setImmagine(rs.getString(9));
+				listaProdotti.add(prodotto);
 			}
 				
 		} catch (SQLException e) {
